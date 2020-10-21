@@ -28,6 +28,9 @@ function setup(){
     game.getState();
     game.start();
 
+    //makes the leader board
+    
+
     
 }
 

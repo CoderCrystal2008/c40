@@ -44,6 +44,7 @@ class Game {
     play(){
         form.hide();
         Player.getPlayerInfo();
+        player.getPlayerRank();
 
         if(allPlayers !== undefined){
             background(groundimg);
@@ -78,6 +79,8 @@ class Game {
         drawSprites();
         if(player.distance>= windowHeight*5){
             gameState = 2;
+            player.rank++
+            Player.updatePlayerRank(player.rank);
         }
         
 
@@ -87,5 +90,6 @@ class Game {
 
     end(){
         console.log("game ended");
+        console.log(player.rank);
     }
 }
